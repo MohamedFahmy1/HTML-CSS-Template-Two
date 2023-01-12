@@ -6,7 +6,7 @@
 }
 /* End Variables */
 
-/* Start variables */
+/* Start Main-Header */
 .main-heading {
   padding-top: 90px;
   padding-bottom: 90px;
@@ -50,7 +50,7 @@
   line-height: 2;
   color: #777;
 }
-/* End variables */
+/* End Main-Header */
 /* Start Global Rules */
 * {
   box-sizing: border-box;
