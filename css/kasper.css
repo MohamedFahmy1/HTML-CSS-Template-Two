@@ -120,8 +120,17 @@ header .container::after {
   z-index: -1;
   color: white;
 }
-header .logo img {
-  height: 40px;
+header .logo .img {
+  position: relative;
+  height: 70px;
+  left: -12px;
+}
+header .logo .text {
+  position: relative;
+  top: 10px;
+  left: -28px;
+  width: 90px;
+  height: 90px;
 }
 header nav {
   display: flex;
@@ -288,7 +297,6 @@ nav .form i {
   width: 18px;
   border-radius: 50%;
   margin-right: 10px;
-  cursor: pointer;
 }
 .landing .icons .circleIcons .active {
   background-color: var(--main-color);
@@ -401,9 +409,15 @@ nav .form i {
 .portfolio .filter li {
   padding: 10px;
 }
+.portfolio .filter:hover li.active {
+  background-color: white;
+  color: black;
+}
+.portfolio .filter li:hover,
+.portfolio .filter li.active:hover,
 .portfolio .filter li.active {
+  background-color: #17797d;
   color: white;
-  background-color: var(--main-color);
 }
 .portfolio .shuffle {
   display: flex;
@@ -449,17 +463,44 @@ nav .form i {
 .portfolio .shuffle .box .text p {
   color: var(--main-color);
 }
-.portfolio .more a {
+.portfolio .btn {
+  position: relative;
+  background-color: transparent;
+  color: var(--main-color);
+  display: flex;
+  padding: 10px 45px;
+  margin: 50px auto 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 900;
+  border: 2px solid var(--main-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.portfolio .btn span {
+  position: relative;
+  transition: 0.5s;
+}
+.portfolio .btn span:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\00bb";
+  position: absolute;
+  font-weight: bold;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+.portfolio .btn:hover span {
+  padding-right: 20px;
+}
+.portfolio .btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.portfolio .btn:hover {
   background-color: var(--main-color);
   color: white;
-  text-transform: uppercase;
-  padding: 15px 20px;
-  display: block;
-  text-align: center;
-  width: fit-content;
-  margin: 30px auto;
-  text-transform: uppercase;
-  text-decoration: none;
 }
 /* End Portfolio */
 /* Start Video */
@@ -837,10 +878,43 @@ nav .form i {
   font-size: 20px;
   margin: 50px auto 20px;
 }
-.pricing .contact button {
+.pricing .btn {
+  position: relative;
+  background-color: transparent;
+  color: var(--main-color);
+  display: flex;
+  padding: 10px 30px;
+  margin: 50px auto 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 900;
+  border: 2px solid var(--main-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.pricing .btn span {
+  position: relative;
+  transition: 0.5s;
+}
+.pricing .btn span:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\00bb";
+  position: absolute;
+  font-weight: bold;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+.pricing .btn:hover span {
+  padding-right: 20px;
+}
+.pricing .btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.pricing .btn:hover {
   background-color: var(--main-color);
-  border: none;
-  padding: 15px 30px;
   color: white;
 }
 /* End Pricing */
@@ -991,7 +1065,7 @@ nav .form i {
 footer {
   padding-top: 50px;
   padding-bottom: 40px;
-  background-image: url(../images/space.jpg);
+  background-image: url(../images/footer.jpg);
   background-size: cover;
   position: relative;
 }
@@ -1010,8 +1084,8 @@ footer .content {
   position: relative;
 }
 footer .container .content img {
-  height: 40px;
-  margin-bottom: 40px;
+  height: 90px;
+  margin-bottom: 10px;
 }
 footer .content > p {
   text-transform: uppercase;
