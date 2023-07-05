@@ -24,17 +24,18 @@
     <header>
       <div class="container">
         <a href="#" class="logo">
-          <img src="images/logo.png" alt="logo" />
+          <img src="images/logo 1.png" class="img" alt="logo" />
+          <img src="images/logo 2.png" class="text" alt="logo" />
         </a>
         <nav>
           <i class="fas fa-bars toggle-menu"></i>
           <ul>
             <li><a href="#" class="active">HOME</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">PORTFOLIO</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">PRICING</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#pricing">PRICING</a></li>
+            <li><a href="#contact">CONTACT</a></li>
           </ul>
           <div class="form">
             <i class="fas fa-search"></i>
@@ -45,6 +46,14 @@
     <!-- End Header Section-->
     <!-- Start Landing Section -->
     <div class="landing">
+      <div class="images">
+        <img
+          src="./images/owl_is_standing_on_tree_branch_in_blue_sky_background_hd_owl.jpg"
+          alt="owl standing on tree branch"
+        />
+        <img src="./images/blue Owl.jpg" alt="" />
+        <img src="./images/blue owl 2.jpg" alt="" />
+      </div>
       <div class="overlay"></div>
       <div class="text">
         <div class="content">
@@ -61,18 +70,14 @@
         </div>
       </div>
       <div class="icons">
-        <i class="fa-solid fa-angle-left LeftArrow"></i>
-        <i class="fa-solid fa-angle-right RightArrow"></i>
-        <div class="circleIcons">
-          <div></div>
-          <div class="active"></div>
-          <div></div>
-        </div>
+        <i class="fa-solid fa-angle-left LeftArrow prev"></i>
+        <i class="fa-solid fa-angle-right RightArrow next"></i>
+        <div class="circleIcons"></div>
       </div>
     </div>
     <!-- End Landing Section -->
     <!-- Start Services Section -->
-    <div class="services">
+    <div class="services" id="services">
       <div class="container">
         <div class="main-heading">
           <div class="text">
@@ -133,7 +138,7 @@
     </div>
     <!-- End Services Section -->
     <!-- Start Design Section -->
-    <div class="design">
+    <div class="design" id="design">
       <div class="image">
         <img src="./images/mobile.png" alt="mobile" />
       </div>
@@ -147,7 +152,7 @@
     </div>
     <!-- End Design Section -->
     <!-- Start Portfolio Section -->
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
       <div class="main-heading">
         <div class="text">
           <h2>portfolio</h2>
@@ -168,65 +173,63 @@
       </div>
       <div class="shuffle">
         <div class="box">
-          <img src="./images/shuffle-01.jpg" alt="Picture" />
+          <img src="./images/shuffle_1.jpg" alt="Picture" />
           <div class="text">
             <h4>Awesome Image</h4>
             <p>Photography</p>
           </div>
         </div>
         <div class="box">
-          <img src="./images/shuffle-02.jpg" alt="Picture" />
+          <img src="./images/shuffle_2.jpg" alt="Picture" />
           <div class="text">
             <h4>Awesome Image</h4>
             <p>Photography</p>
           </div>
         </div>
         <div class="box">
-          <img src="./images/shuffle-03.jpg" alt="Picture" />
+          <img src="./images/shuffle_3.jpg" alt="Picture" />
           <div class="text">
             <h4>Awesome Image</h4>
             <p>Photography</p>
           </div>
         </div>
         <div class="box">
-          <img src="./images/shuffle-04.jpg" alt="Picture" />
+          <img src="./images/shuffle_4.jpg" alt="Picture" />
           <div class="text">
             <h4>Awesome Image</h4>
             <p>Photography</p>
           </div>
         </div>
         <div class="box">
-          <img src="./images/shuffle-05.jpg" alt="Picture" />
+          <img src="./images/shuffle_5.jpg" alt="Picture" />
           <div class="text">
             <h4>Awesome Image</h4>
             <p>Photography</p>
           </div>
         </div>
         <div class="box">
-          <img src="./images/shuffle-06.jpg" alt="Picture" />
+          <img src="./images/shuffle_6.jpg" alt="Picture" />
           <div class="text">
             <h4>Awesome Image</h4>
             <p>Photography</p>
           </div>
         </div>
         <div class="box">
-          <img src="./images/shuffle-07.jpg" alt="Picture" />
+          <img src="./images/shuffle_7.jpg" alt="Picture" />
           <div class="text">
             <h4>Awesome Image</h4>
             <p>Photography</p>
           </div>
         </div>
         <div class="box">
-          <img src="./images/shuffle-08.jpg" alt="Picture" />
+          <img src="./images/shuffle_8.jpg" alt="Picture" />
           <div class="text">
             <h4>Awesome Image</h4>
             <p>Photography</p>
           </div>
         </div>
       </div>
-      <div class="more">
-        <a href="#">more</a>
-      </div>
+      <button type="button" class="btn"><span>More</span></button>
     </div>
     <!-- End Portfolio Section -->
     <!-- Start Video Section -->
@@ -240,7 +243,7 @@
     </div>
     <!-- End Video Section -->
     <!-- Start About Section -->
-    <div class="about">
+    <div class="about" id="about">
       <div class="main-heading">
         <div class="text">
           <h2>about us</h2>
@@ -370,7 +373,7 @@
     </div>
     <!-- End Quote Section -->
     <!-- Start Pricing Section -->
-    <div class="pricing">
+    <div class="pricing" id="pricing">
       <div class="main-heading">
         <div class="text">
           <h2>pricing</h2>
@@ -428,7 +431,7 @@
       </div>
       <div class="contact">
         <p>Contact us if you have special request</p>
-        <button>Contact Us</button>
+        <button type="button" class="btn"><span>Contact Us</span></button>
       </div>
     </div>
     <!-- End Pricing Section -->
@@ -448,7 +451,7 @@
     </div>
     <!-- End Subscribe Section -->
     <!-- Start Contact Section -->
-    <div class="contact">
+    <div class="contact" id="contact">
       <div class="main-heading">
         <div class="text">
           <h2>contact us</h2>
@@ -489,7 +492,9 @@
     <footer>
       <div class="container">
         <div class="content">
-          <img src="./images/logo.png" alt="logo" />
+          <img src="/images/logo 1.png" alt="logo" />
+          <img src="/images/logo 2.png" alt="logo" />
+
           <p>we are social</p>
           <div class="social">
             <i class="fa-brands fa-facebook"></i>
@@ -505,5 +510,7 @@
       </div>
     </footer>
     <!-- End Footer Section -->
+    <!-- JavaScript File -->
+    <script src="./JS/main.js"></script>
   </body>
 </html>

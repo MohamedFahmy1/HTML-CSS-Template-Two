@@ -120,8 +120,17 @@ header .container::after {
   z-index: -1;
   color: white;
 }
-header .logo img {
-  height: 40px;
+header .logo .img {
+  position: relative;
+  height: 70px;
+  left: -12px;
+}
+header .logo .text {
+  position: relative;
+  top: 10px;
+  left: -28px;
+  width: 90px;
+  height: 90px;
 }
 header nav {
   display: flex;
@@ -195,13 +204,18 @@ nav .form i {
 }
 /* Start Landing */
 .landing {
-  min-height: 100vh;
+  height: 100vh;
   background-color: #1f2021;
-  background-image: url("../images/owl_is_standing_on_tree_branch_in_blue_sky_background_hd_owl.jpg");
-  background-size: cover;
   position: relative;
+  overflow: hidden;
 }
-
+.landing .images {
+  display: flex;
+  transition: 0.5s ease-in;
+}
+.landing img {
+  max-width: 100vw;
+}
 .landing .overlay {
   position: absolute;
   top: 0;
@@ -249,6 +263,8 @@ nav .form i {
   left: 0;
   margin-left: 30px;
   font-size: 25px;
+  cursor: pointer;
+  z-index: 3;
 }
 .landing .icons .RightArrow {
   color: white;
@@ -258,6 +274,8 @@ nav .form i {
   right: 0;
   margin-right: 30px;
   font-size: 25px;
+  z-index: 3;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .landing .icons i {
@@ -271,6 +289,7 @@ nav .form i {
   top: 95%;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 4;
 }
 .landing .icons .circleIcons div {
   border: 1px solid white;
@@ -390,9 +409,15 @@ nav .form i {
 .portfolio .filter li {
   padding: 10px;
 }
+.portfolio .filter:hover li.active {
+  background-color: white;
+  color: black;
+}
+.portfolio .filter li:hover,
+.portfolio .filter li.active:hover,
 .portfolio .filter li.active {
+  background-color: #17797d;
   color: white;
-  background-color: var(--main-color);
 }
 .portfolio .shuffle {
   display: flex;
@@ -438,17 +463,44 @@ nav .form i {
 .portfolio .shuffle .box .text p {
   color: var(--main-color);
 }
-.portfolio .more a {
+.portfolio .btn {
+  position: relative;
+  background-color: transparent;
+  color: var(--main-color);
+  display: flex;
+  padding: 10px 45px;
+  margin: 50px auto 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 900;
+  border: 2px solid var(--main-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.portfolio .btn span {
+  position: relative;
+  transition: 0.5s;
+}
+.portfolio .btn span:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\00bb";
+  position: absolute;
+  font-weight: bold;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+.portfolio .btn:hover span {
+  padding-right: 20px;
+}
+.portfolio .btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.portfolio .btn:hover {
   background-color: var(--main-color);
   color: white;
-  text-transform: uppercase;
-  padding: 15px 20px;
-  display: block;
-  text-align: center;
-  width: fit-content;
-  margin: 30px auto;
-  text-transform: uppercase;
-  text-decoration: none;
 }
 /* End Portfolio */
 /* Start Video */
@@ -498,6 +550,7 @@ nav .form i {
   width: fit-content;
   margin: 30px auto 0;
   text-transform: uppercase;
+  cursor: pointer;
 }
 /* End Video */
 /* Start About */
@@ -825,10 +878,43 @@ nav .form i {
   font-size: 20px;
   margin: 50px auto 20px;
 }
-.pricing .contact button {
+.pricing .btn {
+  position: relative;
+  background-color: transparent;
+  color: var(--main-color);
+  display: flex;
+  padding: 10px 30px;
+  margin: 50px auto 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 900;
+  border: 2px solid var(--main-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.pricing .btn span {
+  position: relative;
+  transition: 0.5s;
+}
+.pricing .btn span:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\00bb";
+  position: absolute;
+  font-weight: bold;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+.pricing .btn:hover span {
+  padding-right: 20px;
+}
+.pricing .btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.pricing .btn:hover {
   background-color: var(--main-color);
-  border: none;
-  padding: 15px 30px;
   color: white;
 }
 /* End Pricing */
@@ -979,7 +1065,7 @@ nav .form i {
 footer {
   padding-top: 50px;
   padding-bottom: 40px;
-  background-image: url(../images/space.jpg);
+  background-image: url(../images/footer.jpg);
   background-size: cover;
   position: relative;
 }
@@ -998,8 +1084,8 @@ footer .content {
   position: relative;
 }
 footer .container .content img {
-  height: 40px;
-  margin-bottom: 40px;
+  height: 90px;
+  margin-bottom: 10px;
 }
 footer .content > p {
   text-transform: uppercase;
